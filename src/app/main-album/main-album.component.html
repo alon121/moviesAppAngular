@@ -1,0 +1,4 @@
+<div>
+    <app-single-album  *ngFor="let album of albumsData; let i = index" [title]="album.name" 
+    [description]="album.albums[i].description" [songs]="album.albums"></app-single-album>   
+</div>

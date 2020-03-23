@@ -1,0 +1,32 @@
+<div class="album" [class]="marked" (mouseover)="showProp = true" (mouseleave)="showProp = false">
+<button  class="btn-primary" (click)="showSongs = !showSongs"> SONGS </button> 
+
+<button  class="btn-primary" (click)="mark()"> MARK / UNMARK </button> 
+
+    <h1> {{title}}</h1> 
+<div class="desc" *ngIf="showProp">
+    {{description}}
+</div>
+<div *ngIf="showSongs"> 
+    <ul *ngFor="let song of songs">
+        <li> title: {{song.title}} </li>
+        <li> length: {{song.length}} </li>
+    </ul>
+</div>
+</div>
+
+
+
+<!-- <div >
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <div class="card-text" *ngIf="showProp">
+            <ul *ngFor="let song of songs">
+                <li> title: {{song.title}} </li>
+                <li> length: {{song.length}} </li>
+            </ul>
+    </div>
+  
+      <a  class="btn btn-primary"> view details</a>
+    </div>
+  </div> -->
